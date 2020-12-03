@@ -5,6 +5,9 @@
   "repository": "https://github.com/usbpendrive/mern-example-project.git",
   "author": "usbpendrive <ferry.fernando@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "development": "nodemon"
+  },
   "devDependencies": {
     "@babel/core": "7.12.9",
     "@babel/preset-env": "7.12.7",
