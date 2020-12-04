@@ -1,5 +1,6 @@
 import config from "../config/config";
 import app from "./express";
+import Template from './../template'
 
 import mongoose from 'mongoose'
 
@@ -9,6 +10,10 @@ mongoose.connect(config.mongoUri,
 
 mongoose.connection.on('error', () => {
     throw new Error(`unable to connect to database: ${config.mongoUri}`)
+})
+
+app.get('/', (req, res) => {
+    res.status(200).send(Template())
 })
 
 app.listen(config.port, (err) => {
